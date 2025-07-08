@@ -1,0 +1,414 @@
+/* Variables */
+
+:root {
+  @property --anim-duration {
+    syntax: "<time>";
+    inherits: false;
+    initial-value: 600ms;
+  }
+
+  @property --anim-delay {
+    syntax: "<time>";
+    inherits: false;
+    initial-value: 0ms;
+  }
+
+  @property --anim-iteration-count {
+    syntax: "<number> | infinite";
+    inherits: false;
+    initial-value: 1;
+  }
+
+  @property --anim-direction {
+    syntax: "normal | reverse | alternate | alternate-reverse";
+    inherits: false;
+    initial-value: normal;
+  }
+
+  @property --anim-fill-mode {
+    syntax: "none | forwards | backwards | both";
+    inherits: false;
+    initial-value: none;
+  }
+
+  @property --anim-timing-function {
+    syntax: "*";
+    inherits: false;
+    initial-value: ease;
+  }
+
+  @property --anim-play-state {
+    syntax: "running | paused";
+    inherits: false;
+    initial-value: running;
+  }
+
+  @property --anim-start-opacity {
+    syntax: "<number> | <percentage>";
+    inherits: false;
+    initial-value: 1;
+  }
+  @property --anim-end-opacity {
+    syntax: "<number> | <percentage>";
+    inherits: false;
+    initial-value: 1;
+  }
+
+  @property --anim-start-scale-x {
+    syntax: "<number> | <percentage>";
+    inherits: false;
+    initial-value: 1;
+  }
+  @property --anim-end-scale-x {
+    syntax: "<number> | <percentage>";
+    inherits: false;
+    initial-value: 1;
+  }
+
+  @property --anim-start-scale-y {
+    syntax: "<number> | <percentage>";
+    inherits: false;
+    initial-value: 1;
+  }
+  @property --anim-end-scale-y {
+    syntax: "<number> | <percentage>";
+    inherits: false;
+    initial-value: 1;
+  }
+
+  @property --anim-start-rotate {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+  }
+  @property --anim-end-rotate {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+  }
+
+  @property --anim-start-translate-x {
+    syntax: "<length-percentage>";
+    inherits: false;
+    initial-value: 0;
+  }
+  @property --anim-end-translate-x {
+    syntax: "<length-percentage>";
+    inherits: false;
+    initial-value: 0;
+  }
+
+  @property --anim-start-translate-y {
+    syntax: "<length-percentage>";
+    inherits: false;
+    initial-value: 0;
+  }
+  @property --anim-end-translate-y {
+    syntax: "<length-percentage>";
+    inherits: false;
+    initial-value: 0;
+  }
+}
+
+@theme inline {
+  --duration-0: 0ms;
+  --duration-75: 75ms;
+  --duration-100: 100ms;
+  --duration-150: 150ms;
+  --duration-200: 200ms;
+  --duration-300: 300ms;
+  --duration-400: 400ms;
+  --duration-500: 500ms;
+  --duration-600: 600ms;
+  --duration-700: 700ms;
+  --duration-800: 800ms;
+  --duration-900: 900ms;
+  --duration-1000: 1000ms;
+  --duration-1s: 1s;
+  --duration-2s: 2s;
+  --duration-3s: 3s;
+  --duration-4s: 4s;
+  --duration-5s: 5s;
+  --duration-6s: 6s;
+  --duration-7s: 7s;
+  --duration-8s: 8s;
+  --duration-9s: 9s;
+  --duration-10s: 10s;
+  --duration-11s: 11s;
+  --duration-12s: 12s;
+  --duration-13s: 13s;
+  --duration-14s: 14s;
+  --duration-15s: 15s;
+  --duration-16s: 16s;
+  --duration-17s: 17s;
+  --duration-18s: 18s;
+  --duration-19s: 19s;
+  --duration-20s: 20s;
+
+  --iteration-count-0: 0;
+  --iteration-count-1: 1;
+  --iteration-count-2: 2;
+  --iteration-count-3: 3;
+  --iteration-count-4: 4;
+  --iteration-count-5: 5;
+  --iteration-count-infinite: infinite;
+
+  --direction-normal: normal;
+  --direction-reverse: reverse;
+  --direction-alternate: alternate;
+  --direction-alternate-reverse: alternate-reverse;
+
+  --timing-function-linear: linear;
+  --timing-function-ease: ease;
+  --timing-function-ease-in: ease-in;
+  --timing-function-ease-out: ease-out;
+  --timing-function-ease-in-out: ease-in-out;
+  --timing-function-step-start: step-start;
+  --timing-function-step-end: step-end;
+
+  --fill-mode-none: none;
+  --fill-mode-forwards: forwards;
+  --fill-mode-backwards: backwards;
+  --fill-mode-both: both;
+
+  --play-state-running: running;
+  --play-state-paused: paused;
+
+  --decimal-0: 0;
+  --decimal-5: 0.05;
+  --decimal-10: 0.1;
+  --decimal-15: 0.15;
+  --decimal-20: 0.2;
+  --decimal-25: 0.25;
+  --decimal-30: 0.3;
+  --decimal-35: 0.35;
+  --decimal-40: 0.4;
+  --decimal-45: 0.45;
+  --decimal-50: 0.5;
+  --decimal-55: 0.55;
+  --decimal-60: 0.6;
+  --decimal-65: 0.65;
+  --decimal-70: 0.7;
+  --decimal-75: 0.75;
+  --decimal-80: 0.8;
+  --decimal-85: 0.85;
+  --decimal-90: 0.9;
+  --decimal-95: 0.95;
+  --decimal-100: 1;
+  --decimal-full: 1;
+
+  --percentage-0%: 0%;
+  --percentage-5%: 5%;
+  --percentage-10%: 10%;
+  --percentage-15%: 15%;
+  --percentage-20%: 20%;
+  --percentage-25%: 25%;
+  --percentage-30%: 30%;
+  --percentage-35%: 35%;
+  --percentage-40%: 40%;
+  --percentage-45%: 45%;
+  --percentage-50%: 50%;
+  --percentage-55%: 55%;
+  --percentage-60%: 60%;
+  --percentage-65%: 65%;
+  --percentage-70%: 70%;
+  --percentage-75%: 75%;
+  --percentage-80%: 80%;
+  --percentage-85%: 85%;
+  --percentage-90%: 90%;
+  --percentage-95%: 95%;
+  --percentage-100%: 100%;
+  --percentage-full: 100%;
+
+  --rotate-0: 0deg;
+  --rotate-5: 5deg;
+  --rotate-10: 10deg;
+  --rotate-15: 15deg;
+  --rotate-20: 20deg;
+  --rotate-25: 25deg;
+  --rotate-30: 30deg;
+  --rotate-45: 45deg;
+  --rotate-60: 60deg;
+  --rotate-75: 75deg;
+  --rotate-90: 90deg;
+  --rotate-120: 120deg;
+  --rotate-150: 150deg;
+  --rotate-180: 180deg;
+  --rotate-210: 210deg;
+  --rotate-240: 240deg;
+  --rotate-270: 270deg;
+  --rotate-300: 300deg;
+  --rotate-330: 330deg;
+  --rotate-360: 360deg;
+  --rotate-0.25turn: 90deg;
+  --rotate-0.5turn: 180deg;
+  --rotate-0.75turn: 270deg;
+  --rotate-1turn: 360deg;
+  --rotate-1.25turn: 450deg;
+  --rotate-1.5turn: 540deg;
+  --rotate-1.75turn: 630deg;
+  --rotate-2turn: 720deg;
+  --rotate-2.25turn: 810deg;
+  --rotate-2.5turn: 900deg;
+  --rotate-2.75turn: 990deg;
+  --rotate-3turn: 1080deg;
+
+  --translate-0: 0rem;
+  --translate-0.5: 0.125rem;
+  --translate-1: 0.25rem;
+  --translate-1.5: 0.375rem;
+  --translate-2: 0.5rem;
+  --translate-2.5: 0.625rem;
+  --translate-3: 0.75rem;
+  --translate-3.5: 0.875rem;
+  --translate-4: 1rem;
+  --translate-5: 1.25rem;
+  --translate-6: 1.5rem;
+  --translate-7: 1.75rem;
+  --translate-8: 2rem;
+  --translate-9: 2.25rem;
+  --translate-10: 2.5rem;
+  --translate-11: 2.75rem;
+  --translate-12: 3rem;
+  --translate-14: 3.5rem;
+  --translate-16: 4rem;
+  --translate-18: 4.5rem;
+  --translate-20: 5rem;
+  --translate-22: 5.5rem;
+  --translate-24: 6rem;
+  --translate-26: 6.5rem;
+  --translate-28: 7rem;
+  --translate-30: 7.5rem;
+  --translate-32: 8rem;
+  --translate-36: 8.5rem;
+  --translate-40: 10rem;
+  --translate-44: 11rem;
+  --translate-48: 12rem;
+  --translate-52: 13rem;
+  --translate-56: 14rem;
+  --translate-60: 15rem;
+  --translate-64: 16rem;
+}
+
+/* Keyframes */
+
+@keyframes anim {
+  from {
+    opacity: var(--anim-start-opacity);
+    scale: var(--anim-start-scale-x) var(--anim-start-scale-y);
+    rotate: var(--anim-start-rotate);
+    translate: var(--anim-start-translate-x) var(--anim-start-translate-y);
+  }
+  to {
+    opacity: var(--anim-end-opacity);
+    scale: var(--anim-end-scale-x) var(--anim-end-scale-y);
+    rotate: var(--anim-end-rotate);
+    translate: var(--anim-end-translate-x) var(--anim-end-translate-y);
+  }
+}
+
+@keyframes anim-in {
+  from {
+    opacity: var(--anim-start-opacity);
+    scale: var(--anim-start-scale-x) var(--anim-start-scale-y);
+    rotate: var(--anim-start-rotate);
+    translate: var(--anim-start-translate-x) var(--anim-start-translate-y);
+  }
+  to {
+    opacity: var(--anim-end-opacity);
+    scale: var(--anim-end-scale-x) var(--anim-end-scale-y);
+    rotate: var(--anim-end-rotate);
+    translate: var(--anim-end-translate-x) var(--anim-end-translate-y);
+  }
+}
+
+@keyframes anim-out {
+  from {
+    opacity: var(--anim-start-opacity);
+    scale: var(--anim-start-scale-x) var(--anim-start-scale-y);
+    rotate: var(--anim-start-rotate);
+    translate: var(--anim-start-translate-x) var(--anim-start-translate-y);
+  }
+  to {
+    opacity: var(--anim-end-opacity);
+    scale: var(--anim-end-scale-x) var(--anim-end-scale-y);
+    rotate: var(--anim-end-rotate);
+    translate: var(--anim-end-translate-x) var(--anim-end-translate-y);
+  }
+}
+
+/* Animation utilities */
+
+@utility anim {
+  animation-name: anim;
+  animation-duration: var(--anim-duration);
+  animation-delay: var(--anim-delay);
+  animation-iteration-count: var(--anim-iteration-count);
+  animation-direction: var(--anim-direction);
+  animation-fill-mode: var(--anim-fill-mode);
+  animation-timing-function: var(--anim-timing-function);
+  animation-play-state: var(--anim-play-state);
+}
+
+@utility anim-in {
+  animation-name: anim-in;
+  animation-duration: var(--anim-duration);
+  animation-delay: var(--anim-delay);
+  animation-iteration-count: var(--anim-iteration-count);
+  animation-direction: var(--anim-direction);
+  animation-fill-mode: var(--anim-fill-mode);
+  animation-timing-function: var(--anim-timing-function);
+  animation-play-state: var(--anim-play-state);
+}
+
+@utility anim-out {
+  animation-name: anim-out;
+  animation-duration: var(--anim-duration);
+  animation-delay: var(--anim-delay);
+  animation-iteration-count: var(--anim-iteration-count);
+  animation-direction: var(--anim-direction);
+  animation-fill-mode: var(--anim-fill-mode);
+  animation-timing-function: var(--anim-timing-function);
+  animation-play-state: var(--anim-play-state);
+}
+
+/* Animation modifiers */
+
+@utility anim-duration-* {
+  --anim-duration: calc(--value(number, [number]) * 1ms);
+  --anim-duration: --value(--duration- *, [ *]);
+}
+
+@utility anim-delay-* {
+  --anim-delay: calc(--value(number, [number]) * 1ms);
+  --anim-delay: --value(--duration- *, [ *]);
+}
+
+@utility -anim-delay-* {
+  --anim-delay: calc(--value(number, [number]) * -1ms);
+  --anim-delay: calc(--value(--duration- *, [ *]) * -1);
+}
+
+@utility anim-repeat-* {
+  --anim-iteration-count: --value(number, [number], --iteration-count- *, [ *]);
+}
+
+@utility anim-* {
+  --anim-direction: --value(--direction- *);
+  --anim-fill-mode: --value(--fill-mode- *);
+  --anim-timing-function: --value(--timing-function- *, [ *]);
+  --anim-play-state: --value(--play-state- *);
+}
+
+@utility anim-apply-opacity {
+  opacity: var(--anim-start-opacity);
+}
+@utility anim-apply-scale {
+  scale: var(--anim-start-scale-x) var(--anim-start-scale-y);
+}
+@utility anim-apply-rotate {
+  rotate: var(--anim-start-rotate);
+}
+@utility anim-apply-translate {
+  translate: var(--anim-start-translate-x) var(--anim-start-translate-y);
+}

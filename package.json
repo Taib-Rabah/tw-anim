@@ -1,0 +1,35 @@
+{
+  "name": "tw-anim",
+  "version": "0.0.1",
+  "description": "A collection of Tailwind CSS animations.",
+  "main": "./dist/fancy.css",
+  "scripts": {
+    "build": "tsx .dev/scripts/build.ts",
+    "format": "prettier --write src"
+  },
+  "exports": {
+    ".": "./dist/fancy.css",
+    "./fancy": "./dist/fancy.css",
+    "./base": "./dist/base.css",
+    "./simple": "./dist/simple.css",
+    "./all": "./dist/all.css"
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": ["tailwind", "css", "animation"],
+  "author": "Rabah Taib",
+  "license": "MIT",
+  "packageManager": "pnpm@10.10.0",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "@types/node": "^24.0.10",
+    "prettier": "^3.6.2",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "tsx": "^4.20.3"
+  }
+}
