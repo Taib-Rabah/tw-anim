@@ -1,6 +1,6 @@
 {
   "name": "tw-anim",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A collection of Tailwind CSS animations.",
   "main": "./src/fancy.css",
   "scripts": {
