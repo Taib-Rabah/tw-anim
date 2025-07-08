@@ -2,20 +2,20 @@
   "name": "tw-anim",
   "version": "0.0.1",
   "description": "A collection of Tailwind CSS animations.",
-  "main": "./dist/fancy.css",
+  "main": "./src/fancy.css",
   "scripts": {
     "build": "tsx .dev/scripts/build.ts",
     "format": "prettier --write src"
   },
   "exports": {
-    ".": "./dist/fancy.css",
-    "./fancy": "./dist/fancy.css",
-    "./base": "./dist/base.css",
-    "./simple": "./dist/simple.css",
-    "./all": "./dist/all.css"
+    ".": "./src/fancy.css",
+    "./fancy": "./src/fancy.css",
+    "./base": "./src/base.css",
+    "./simple": "./src/simple.css",
+    "./all": "./src/all.css"
   },
   "files": [
-    "dist",
+    "src",
     "package.json"
   ],
   "publishConfig": {
