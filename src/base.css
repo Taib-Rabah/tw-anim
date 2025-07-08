@@ -376,28 +376,28 @@
 
 @utility anim-duration-* {
   --anim-duration: calc(--value(number, [number]) * 1ms);
-  --anim-duration: --value(--duration- *, [ *]);
+  --anim-duration: --value(--duration-*, [*]);
 }
 
 @utility anim-delay-* {
   --anim-delay: calc(--value(number, [number]) * 1ms);
-  --anim-delay: --value(--duration- *, [ *]);
+  --anim-delay: --value(--duration-*, [*]);
 }
 
 @utility -anim-delay-* {
   --anim-delay: calc(--value(number, [number]) * -1ms);
-  --anim-delay: calc(--value(--duration- *, [ *]) * -1);
+  --anim-delay: calc(--value(--duration-*, [*]) * -1);
 }
 
 @utility anim-repeat-* {
-  --anim-iteration-count: --value(number, [number], --iteration-count- *, [ *]);
+  --anim-iteration-count: --value(number, [number], --iteration-count-*, [*]);
 }
 
 @utility anim-* {
-  --anim-direction: --value(--direction- *);
-  --anim-fill-mode: --value(--fill-mode- *);
-  --anim-timing-function: --value(--timing-function- *, [ *]);
-  --anim-play-state: --value(--play-state- *);
+  --anim-direction: --value(--direction-*);
+  --anim-fill-mode: --value(--fill-mode-*);
+  --anim-timing-function: --value(--timing-function-*, [*]);
+  --anim-play-state: --value(--play-state-*);
 }
 
 @utility anim-apply-opacity {

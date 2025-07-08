@@ -4,62 +4,62 @@
 
 @utility anim-opacity-* {
   --anim-start-opacity: calc(--value(number) / 100);
-  --anim-start-opacity: --value(--decimal- *, [ *]);
+  --anim-start-opacity: --value(--decimal-*, [*]);
 
   --anim-end-opacity: calc(--modifier(number) / 100);
-  --anim-end-opacity: --modifier(--decimal- *, [ *]);
+  --anim-end-opacity: --modifier(--decimal-*, [*]);
 }
 @utility anim-opacity-to-* {
   --anim-end-opacity: calc(--modifier(number) / 100);
-  --anim-end-opacity: --modifier(--decimal- *, [ *]);
+  --anim-end-opacity: --modifier(--decimal-*, [*]);
 }
 
 /* Scale utilities */
 
 @utility anim-scale-* {
   --anim-start-scale-x: calc(--value(number) / 100);
-  --anim-start-scale-x: --value(--decimal- *, [ *]);
+  --anim-start-scale-x: --value(--decimal-*, [*]);
 
   --anim-start-scale-y: calc(--value(number) / 100);
-  --anim-start-scale-y: --value(--decimal- *, [ *]);
+  --anim-start-scale-y: --value(--decimal-*, [*]);
 
   --anim-end-scale-x: calc(--modifier(number) / 100);
-  --anim-end-scale-x: --modifier(--decimal- *, [ *]);
+  --anim-end-scale-x: --modifier(--decimal-*, [*]);
 
   --anim-end-scale-y: calc(--modifier(number) / 100);
-  --anim-end-scale-y: --modifier(--decimal- *, [ *]);
+  --anim-end-scale-y: --modifier(--decimal-*, [*]);
 }
 
 @utility anim-scale-to-* {
   --anim-end-scale-x: calc(--value(number) / 100);
-  --anim-end-scale-x: --value(--decimal- *, [ *]);
+  --anim-end-scale-x: --value(--decimal-*, [*]);
 
   --anim-end-scale-y: calc(--value(number) / 100);
-  --anim-end-scale-y: --value(--decimal- *, [ *]);
+  --anim-end-scale-y: --value(--decimal-*, [*]);
 }
 
 @utility anim-scale-x-* {
   --anim-start-scale-x: calc(--value(number) / 100);
-  --anim-start-scale-x: --value(--decimal- *, [ *]);
+  --anim-start-scale-x: --value(--decimal-*, [*]);
 
   --anim-end-scale-x: calc(--modifier(number) / 100);
-  --anim-end-scale-x: --modifier(--decimal- *, [ *]);
+  --anim-end-scale-x: --modifier(--decimal-*, [*]);
 }
 @utility anim-scale-x-to-* {
   --anim-end-scale-x: calc(--value(number) / 100);
-  --anim-end-scale-x: --value(--decimal- *, [ *]);
+  --anim-end-scale-x: --value(--decimal-*, [*]);
 }
 
 @utility anim-scale-y-* {
   --anim-start-scale-y: calc(--value(number) / 100);
-  --anim-start-scale-y: --value(--decimal- *, [ *]);
+  --anim-start-scale-y: --value(--decimal-*, [*]);
 
   --anim-end-scale-y: calc(--modifier(number) / 100);
-  --anim-end-scale-y: --modifier(--decimal- *, [ *]);
+  --anim-end-scale-y: --modifier(--decimal-*, [*]);
 }
 @utility anim-scale-y-to-* {
   --anim-end-scale-y: calc(--value(number) / 100);
-  --anim-end-scale-y: --value(--decimal- *, [ *]);
+  --anim-end-scale-y: --value(--decimal-*, [*]);
 }
 
 /* Rotate utilities */
@@ -67,218 +67,122 @@
 @utility anim-rotate-* {
   --anim-start-rotate: calc(--value(number) * 1deg);
   --anim-start-rotate: calc(--value(ratio) * 360deg);
-  --anim-start-rotate: --value(--rotate- *, [ *]);
+  --anim-start-rotate: --value(--rotate-*, [*]);
 
   --anim-end-rotate: calc(--modifier(number) * 1deg);
   --anim-end-rotate: calc(--modifier(ratio) * 360deg);
-  --anim-end-rotate: --modifier(--rotate- *, [ *]);
+  --anim-end-rotate: --modifier(--rotate-*, [*]);
 }
 @utility -anim-rotate-* {
   --anim-start-rotate: calc(--value(number) * -1deg);
   --anim-start-rotate: calc(--value(ratio) * -360deg);
-  --anim-start-rotate: calc(--value(--rotate- *, [ *]) * -1);
+  --anim-start-rotate: calc(--value(--rotate-*, [*]) * -1);
 
   --anim-end-rotate: calc(--modifier(number) * -1deg);
   --anim-end-rotate: calc(--modifier(ratio) * -360deg);
-  --anim-end-rotate: calc(--modifier(--rotate- *, [ *]) * -1);
+  --anim-end-rotate: calc(--modifier(--rotate-*, [*]) * -1);
 }
 
 @utility anim-rotate-to-* {
   --anim-end-rotate: calc(--modifier(number) * 1deg);
   --anim-end-rotate: calc(--modifier(ratio) * 360deg);
-  --anim-end-rotate: --modifier(--rotate- *, [ *]);
+  --anim-end-rotate: --modifier(--rotate-*, [*]);
 }
 @utility -anim-rotate-to-* {
   --anim-end-rotate: calc(--modifier(number) * -1deg);
   --anim-end-rotate: calc(--modifier(ratio) * -360deg);
-  --anim-end-rotate: calc(--modifier(--rotate- *, [ *]) * -1);
+  --anim-end-rotate: calc(--modifier(--rotate-*, [*]) * -1);
 }
 
 /* Translate utilities */
 
 @utility anim-x-* {
-  --anim-start-translate-x: --value(
-    --translate- *,
-    --percentage- *,
-    percentage,
-    [ *]
-  );
+  --anim-start-translate-x: --value(--translate-*, --percentage-*, percentage, [*]);
   --anim-start-translate-x: calc(--value(number, [number]) / 4 * 1rem);
 
-  --anim-end-translate-x: --modifier(
-    --translate- *,
-    --percentage- *,
-    percentage,
-    [ *]
-  );
+  --anim-end-translate-x: --modifier(--translate-*, --percentage-*, percentage, [*]);
   --anim-end-translate-x: calc(--modifier(number, [number]) / 4 * 1rem);
 }
 @utility -anim-x-* {
-  --anim-start-translate-x: calc(
-    --value(--translate- *, --percentage- *, percentage, [ *]) * -1
-  );
+  --anim-start-translate-x: calc(--value(--translate-*, --percentage-*, percentage, [*]) * -1);
   --anim-start-translate-x: calc(--value(number, [number]) / 4 * -1rem);
 
-  --anim-end-translate-x: --modifier(
-    --translate- *,
-    --percentage- *,
-    percentage,
-    [ *]
-  );
+  --anim-end-translate-x: --modifier(--translate-*, --percentage-*, percentage, [*]);
   --anim-end-translate-x: calc(--modifier(number, [number]) / 4 * 1rem);
 }
 
 @utility anim-x-to-* {
-  --anim-end-translate-x: --value(
-    --translate- *,
-    --percentage- *,
-    percentage,
-    [ *]
-  );
+  --anim-end-translate-x: --value(--translate-*, --percentage-*, percentage, [*]);
   --anim-end-translate-x: calc(--value(number, [number]) / 4 * 1rem);
 }
 @utility -anim-x-to-* {
-  --anim-end-translate-x: calc(
-    --value(--translate- *, --percentage- *, percentage, [ *]) * -1
-  );
+  --anim-end-translate-x: calc(--value(--translate-*, --percentage-*, percentage, [*]) * -1);
   --anim-end-translate-x: calc(--value(number, [number]) / 4 * -1rem);
 }
 
 @utility anim-y-* {
-  --anim-start-translate-y: --value(
-    --translate- *,
-    --percentage- *,
-    percentage,
-    [ *]
-  );
+  --anim-start-translate-y: --value(--translate-*, --percentage-*, percentage, [*]);
   --anim-start-translate-y: calc(--value(number, [number]) / 4 * 1rem);
 
-  --anim-end-translate-y: --modifier(
-    --translate- *,
-    --percentage- *,
-    percentage,
-    [ *]
-  );
+  --anim-end-translate-y: --modifier(--translate-*, --percentage-*, percentage, [*]);
   --anim-end-translate-y: calc(--modifier(number, [number]) / 4 * 1rem);
 }
 @utility -anim-y-* {
-  --anim-start-translate-y: calc(
-    --value(--translate- *, --percentage- *, percentage, [ *]) * -1
-  );
+  --anim-start-translate-y: calc(--value(--translate-*, --percentage-*, percentage, [*]) * -1);
   --anim-start-translate-y: calc(--value(number, [number]) / 4 * -1rem);
 
-  --anim-end-translate-y: --modifier(
-    --translate- *,
-    --percentage- *,
-    percentage,
-    [ *]
-  );
+  --anim-end-translate-y: --modifier(--translate-*, --percentage-*, percentage, [*]);
   --anim-end-translate-y: calc(--modifier(number, [number]) / 4 * 1rem);
 }
 
 @utility anim-y-to-* {
-  --anim-end-translate-y: --value(
-    --translate- *,
-    --percentage- *,
-    percentage,
-    [ *]
-  );
+  --anim-end-translate-y: --value(--translate-*, --percentage-*, percentage, [*]);
   --anim-end-translate-y: calc(--value(number, [number]) / 4 * 1rem);
 }
 @utility -anim-y-to-* {
-  --anim-end-translate-y: calc(
-    --value(--translate- *, --percentage- *, percentage, [ *]) * -1
-  );
+  --anim-end-translate-y: calc(--value(--translate-*, --percentage-*, percentage, [*]) * -1);
   --anim-end-translate-y: calc(--value(number, [number]) / 4 * -1rem);
 }
 
 @utility anim-xy-* {
-  --anim-start-translate-x: --value(
-    --translate- *,
-    --percentage- *,
-    percentage,
-    [ *]
-  );
+  --anim-start-translate-x: --value(--translate-*, --percentage-*, percentage, [*]);
   --anim-start-translate-x: calc(--value(number, [number]) / 4 * 1rem);
 
-  --anim-start-translate-y: --value(
-    --translate- *,
-    --percentage- *,
-    percentage,
-    [ *]
-  );
+  --anim-start-translate-y: --value(--translate-*, --percentage-*, percentage, [*]);
   --anim-start-translate-y: calc(--value(number, [number]) / 4 * 1rem);
 
-  --anim-end-translate-x: --modifier(
-    --translate- *,
-    --percentage- *,
-    percentage,
-    [ *]
-  );
+  --anim-end-translate-x: --modifier(--translate-*, --percentage-*, percentage, [*]);
   --anim-end-translate-x: calc(--modifier(number, [number]) / 4 * 1rem);
 
-  --anim-end-translate-y: --modifier(
-    --translate- *,
-    --percentage- *,
-    percentage,
-    [ *]
-  );
+  --anim-end-translate-y: --modifier(--translate-*, --percentage-*, percentage, [*]);
   --anim-end-translate-y: calc(--modifier(number, [number]) / 4 * 1rem);
 }
 
 @utility -anim-xy-* {
-  --anim-start-translate-x: calc(
-    --value(--translate- *, --percentage- *, percentage, [ *]) * -1
-  );
+  --anim-start-translate-x: calc(--value(--translate-*, --percentage-*, percentage, [*]) * -1);
   --anim-start-translate-x: calc(--value(number, [number]) / 4 * -1rem);
 
-  --anim-start-translate-y: calc(
-    --value(--translate- *, --percentage- *, percentage, [ *]) * -1
-  );
+  --anim-start-translate-y: calc(--value(--translate-*, --percentage-*, percentage, [*]) * -1);
   --anim-start-translate-y: calc(--value(number, [number]) / 4 * -1rem);
 
-  --anim-end-translate-x: --modifier(
-    --translate- *,
-    --percentage- *,
-    percentage,
-    [ *]
-  );
+  --anim-end-translate-x: --modifier(--translate-*, --percentage-*, percentage, [*]);
   --anim-end-translate-x: calc(--modifier(number, [number]) / 4 * 1rem);
 
-  --anim-end-translate-y: --modifier(
-    --translate- *,
-    --percentage- *,
-    percentage,
-    [ *]
-  );
+  --anim-end-translate-y: --modifier(--translate-*, --percentage-*, percentage, [*]);
   --anim-end-translate-y: calc(--modifier(number, [number]) / 4 * 1rem);
 }
 
 @utility anim-xy-to-* {
-  --anim-end-translate-x: --value(
-    --translate- *,
-    --percentage- *,
-    percentage,
-    [ *]
-  );
+  --anim-end-translate-x: --value(--translate-*, --percentage-*, percentage, [*]);
   --anim-end-translate-x: calc(--value(number, [number]) / 4 * 1rem);
 
-  --anim-end-translate-y: --value(
-    --translate- *,
-    --percentage- *,
-    percentage,
-    [ *]
-  );
+  --anim-end-translate-y: --value(--translate-*, --percentage-*, percentage, [*]);
   --anim-end-translate-y: calc(--value(number, [number]) / 4 * 1rem);
 }
 @utility -anim-xy-to-* {
-  --anim-end-translate-x: calc(
-    --value(--translate- *, --percentage- *, percentage, [ *]) * -1
-  );
+  --anim-end-translate-x: calc(--value(--translate-*, --percentage-*, percentage, [*]) * -1);
   --anim-end-translate-x: calc(--value(number, [number]) / 4 * -1rem);
 
-  --anim-end-translate-y: calc(
-    --value(--translate- *, --percentage- *, percentage, [ *]) * -1
-  );
+  --anim-end-translate-y: calc(--value(--translate-*, --percentage-*, percentage, [*]) * -1);
   --anim-end-translate-y: calc(--value(number, [number]) / 4 * -1rem);
 }
