@@ -402,13 +402,17 @@
 
 @utility anim-apply-opacity {
   opacity: var(--anim-start-opacity);
+  --anim-fill-mode: forwards;
 }
 @utility anim-apply-scale {
   scale: var(--anim-start-scale-x) var(--anim-start-scale-y);
+  --anim-fill-mode: forwards;
 }
 @utility anim-apply-rotate {
   rotate: var(--anim-start-rotate);
+  --anim-fill-mode: forwards;
 }
 @utility anim-apply-translate {
   translate: var(--anim-start-translate-x) var(--anim-start-translate-y);
+  --anim-fill-mode: forwards;
 }
